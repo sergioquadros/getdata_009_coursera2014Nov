@@ -1,0 +1,83 @@
+---
+title: "Summary of UCI HAR Dataset"
+author: "Sérgio Henrique Silveira de Quadros"
+date: "06-11-2014"
+output: html_document
+---
+We have this structure in [zip file](<https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>) from the HAR dataset:
+* README.txt:
+    + Method:
+        + 30 volunteers(19-48 years)
+        + 6 activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone
+        + Video-recorded to label the data manually. Dataset has been randomly partitioned into two sets: 70% of the volunteers was selected for generating the training data and 30% the test data.
+        + The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window that was stored in Inertials Signals files). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of 561 features was obtained by calculating variables from the time and frequency domain that was stored in X_test.txt and X_train.txt files.
+        + 'train/X_train.txt' (); 'train/y_train.txt' (Training labels); 'test/X_test.txt' (Test set); 'test/y_test.txt' (Test labels).
+* features_info.txt:
+    + information about the variables used on the feature vector: accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ(*'t'* time domain)and filters->linear acceleration and angular velocity=Jerk signals(Euclidean norm)->Fast Fourier Transform (FFT) obtain  *'f'* frequency domain->The set of variables that were estimated from these signals are: mean(),std(), etc->By averaging the signals are used on the angle() variable: gravityMean, tBodyAccMean, tBodyAccJerkMean, tBodyGyroMean, tBodyGyroJerkMean. The hole list in features.txt
+* features.txt:
+    + list of 561 names of variables dim(561, 2): 
+1 tBodyAcc-mean()-X
+2 tBodyAcc-mean()-Y
+3 tBodyAcc-mean()-Z
+....
+558 angle(tBodyGyroJerkMean,gravityMean)
+559 angle(X,gravityMean)
+560 angle(Y,gravityMean)
+561 angle(Z,gravityMean)
+* activity_labels.txt: 
+     + Links the class labels with their activity name: 1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING
+* test
+    + Inertial Signals
+         + body_acc_x_test.txt: dim(2947, 128) or "2947 rows for observations and 128 columns for 128 readings/windows"
+         + body_acc_y_test.txt: dim(2947, 128)
+         + body_acc_z_test.txt: dim(2947, 128)
+         + body_gyro_x_test.txt: dim(2947, 128)
+         + body_gyro_y_test.txt: dim(2947, 128)
+         + body_gyro_z_test.txt: dim(2947, 128)
+         + total_acc_x_test.txt: dim(2947, 128)
+         + total_acc_y_test.txt: dim(2947, 128)
+         + total_acc_z_test.txt: dim(2947, 128)
+    + subject_test.txt: dim(2947, 1)
+    + X_test.txt: dim(2947, 561)
+    + y_test.txt: dim(2947, 1)
+                
+* train
+    + Inertial Signals
+         + body_acc_x_train.txt: dim(7352, 128)
+             + The body acceleration signal obtained by subtracting the gravity from the total acceleration in x axis.
+         + body_acc_y_train.txt: dim(7352, 128)
+             + Similar in y axis
+         + body_acc_z_train.txt: dim(7352, 128)
+             + Similar in z axis
+         + body_gyro_x_train.txt: dim(7352, 128)
+             + The angular velocity vector measured by the gyroscope for each window sample in x axis. The units are rad/s
+         + body_gyro_y_train.txt: dim(7352, 128)
+             + Similar in y axis
+         + body_gyro_z_train.txt: dim(7352, 128)
+             + Similar in z axis
+         + total_acc_x_train.txt: dim(7352, 128)
+             + The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'.
+         + total_acc_y_train.txt: dim(7352, 128)
+             + Similar in y axis
+         + total_acc_z_train.txt: dim(7352, 128) 
+             + Similar in z axis
+
+    + subject_train.txt: 
+         + Each row identifies id(1:30) the subject who performed the activity for each window sample linked with next two files with dim(7352,1)
+    + X_train.txt: Training set with dim(7352,561)
+    + y_train.txt: Training labels(1:6) with dim(7352,1)
+
+---
+
+Visit for more information in Jorge Reyes et al.:
+
++  <http://www.jucs.org/jucs_19_9/energy_efficient_smartphone_based>
+
++  <https://sites.google.com/site/jorgereyesresearch/publications>
+
+---
