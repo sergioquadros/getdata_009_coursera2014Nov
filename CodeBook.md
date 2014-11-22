@@ -31,13 +31,14 @@ My recipe for getting tidy data with this [run_analisys.R](<https://github.com/s
 +  Naming columns of values in **X_test.txt** and **X_train.txt** with suited variables in **feafures.txt**
 +  Suiting descriptive values for "**activity**" variable in **y_test.txt** and **y_train.txt**;
 +  Binding columns:
-  +  In this order named **subject_test.txt**, named and suited **y_test.txt** and **X_test.txt** for **set** data frame;
+  +  In this order named **subject_test.txt**, named and suited **y_test.txt** and **X_test.txt** for **test** data frame;
   +  In this order named **subject_train.txt**, named and suited **y_train.txt** and **X_train.txt** for **train** data frame.
 +  Biding rows for **set** and **train** data frames to make a tidy set named **first_tidy** and printing in a text file format **first_tidy.txt**;
 +  Summarizing the **first_tidy** set with mean and sd for each column from 3rd to 563th and printing as **tidy2.txt**, my choice putting in each column the name of variable, his mean and his sd;
-+  Summarizing the **first_tidy** set grouped by **subjet** and **activity** with mean and sd and printing as **tidy3.txt**.
++  Summarizing the **first_tidy** set grouped by **subject** and **activity** with mean and sd and printing as **tidy3.txt**.
 
-# References
+## References
+
 
 
 
