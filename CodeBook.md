@@ -19,7 +19,7 @@ For a quick genealogy in variables' names from 3rd to 563 were achieved using a 
 We have two main components detected by our sensors: linear and angular acceleration that could be affected by gravity, magnetic field and movement's mode like jerks and spins in that subjects' bodies. So they was combined and born this myriad of names, but not only that, we also want one big collection of statistics and physical quantities like mean, standard deviation, maximum, minimum, skewness, kurtosis, irq, sma, entropy, energy and his bands, etc for each axis.
 My recipe for getting tidy data with this [run_analisys.R](<https://github.com/sergioquadros/getdata_009_coursera2014Nov/blob/master/run_analisys.R>) in this case was:
 +  Download and unzip directories and files;
-+  Creating a working directories with relative path names;
++  Creating a set of working directories with relative path names;
 +  
 
 
