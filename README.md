@@ -26,6 +26,8 @@ This script produces three files in flat plain text format:
 If you want to run this script, command this in your R console (like RStudio) at your working directory:
 ```source(file="./run_analysis.R", local = TRUE, echo = TRUE)```  
 
+The run_analisys.R script:
+
 ```
 # shsq Coursera: Getting and Cleaning Data/2014-11
 # Ubuntu 14.04 LTS =  i686-pc-linux-gnu (32-bit)
