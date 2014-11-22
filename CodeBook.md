@@ -21,17 +21,20 @@ From **Inertials Signals** files in **test** directory, the **X_test.txt** was c
 For a quick genealogy in variables' names from 3rd to 563th were achieved using a Fast Fourier Transformation, **FFT**, so it makes two domains: time with **t** prefix for 3rd up to 267th; frequency with **f** prefix for another ones. 
 We have two main components detected by our sensors: linear and angular acceleration that could be affected by gravity, magnetic field and movement's mode like jerks and spins in that subjects' bodies. So they was combined and born this myriad of names, but not only that, we also want one big collection of statistics and physical quantities like mean, standard deviation, maximum, minimum, skewness, kurtosis, irq, sma, entropy, energy and his bands, etc for each axis.
 
-My recipe for getting tidy data with this [run_analisys.R](<https://github.com/sergioquadros/getdata_009_coursera2014Nov/blob/master/run_analisys.R>) in this case was:
+My recipe for getting tidy data with this [run_analisys.R](<https://github.com/sergioquadros/getdata_009_coursera2014Nov/blob/master/run_analisys.R>) script in this case was:
 +  Download and unzip directories and files;
 +  Creating a set of working directories with relative path names;
 +  Reading files and giving descriptive labels for variables:
   +  "**subject**" for values in **subject_test.txt** and **subject_train.txt**;
-  +  "**activity**" for values in **y_test.txt** and **y_test.txt**;
+  +  "**activity**" for values in **y_test.txt** and **y_train.txt**;
   +  Suiting variables' names in **feafures.txt** for from 3rd to 563th columns.
-+  Naming columns of values in "**X_test.txt**" and "**X_train.txt**" with suited variables in **feafures.txt**
-+  Suiting descriptive values for "**activity**" variable in **y_test.txt** and **y_test.txt**;
-+  Column binding:
-  +  
++  Naming columns of values in **X_test.txt** and **X_train.txt** with suited variables in **feafures.txt**
++  Suiting descriptive values for "**activity**" variable in **y_test.txt** and **y_train.txt**;
++  Binding columns:
+  +  In this order named **subject_test.txt**, named and suited **y_test.txt** and **X_test.txt** for **set** data frame;
+  +  In this order named **subject_train.txt**, named and suited **y_train.txt** and **X_train.txt** for **train** data frame.
++  Biding rows for **set** and **train** data frames to make a tidy set named **first_tidy** and printing in a text file format **first_tidy.txt**.
++  Summarizing
 
 
 
