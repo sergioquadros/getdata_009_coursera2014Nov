@@ -37,8 +37,16 @@ My recipe for getting tidy data with this [run_analisys.R](<https://github.com/s
 +  Summarizing the **first_tidy** set with mean and sd for each column from 3rd to 563th and printing as **tidy2.txt**, my choice putting in each column the name of variable, his mean and his sd;
 +  Summarizing the **first_tidy** set grouped by **subject** and **activity** with mean and sd and printing as **tidy3.txt**.
 
-## References
+Many thanks for Forum's tips and course materials.
 
+## References
+Visit for more information in Jorge Reyes et al.:
+
++  <http://www.jucs.org/jucs_19_9/energy_efficient_smartphone_based>
+
++  <https://sites.google.com/site/jorgereyesresearch/publications>
+
++  <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
 
 
 
