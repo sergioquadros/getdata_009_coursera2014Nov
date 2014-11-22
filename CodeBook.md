@@ -25,7 +25,14 @@ My recipe for getting tidy data with this [run_analisys.R](<https://github.com/s
 +  Download and unzip directories and files;
 +  Creating a set of working directories with relative path names;
 +  Reading files and giving descriptive labels for variables:
-  ++  "**subject**" for values in     
+  +  "**subject**" for values in **subject_test.txt** and **subject_train.txt**;
+  +  "**activity**" for values in **y_test.txt** and **y_test.txt**;
+  +  Suiting variables' names in **feafures.txt** for from 3rd to 563th columns.
++  Naming columns of values in "**X_test.txt**" and "**X_train.txt**" with suited variables in **feafures.txt**
++  Suiting descriptive values for "**activity**" variable in **y_test.txt** and **y_test.txt**;
++  Column binding:
+  +  
+
 
 
 
