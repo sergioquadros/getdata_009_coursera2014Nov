@@ -22,6 +22,10 @@ This script produces three files in flat plain text format:
  
 +  "**tidy3.txt**": a summarizing file by mean for each column after group tidy data by __"subject"__ and __"activity"__.
   
+
+If you want to run this script, command this in your R console (like RStudio) at your working directory:
+```source(file="./run_analysis.R", local = TRUE, echo = TRUE)```  
+
 ```
 # shsq Coursera: Getting and Cleaning Data/2014-11
 # Ubuntu 14.04 LTS =  i686-pc-linux-gnu (32-bit)
