@@ -16,7 +16,7 @@ In the same way the train set had treated.
 
 The smartphone's sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings in unnamed columns/window that was stored in **Inertials Signals** files for each set). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. 
 
-From **Inertials Signals** files in **test** directory, the **X_test.txt** was calculated 561 variables for each observation that was named in a peculiar mode by authors and this names was stored in **features.txt**. This names was repeated and they used forbidden characters that in this work I corrected with ```make.names(features, unique = TRUE)```. That variables'names from 303th to 316th columns was repeated in 317:330 and 331:344 respectively and gained sufixes _2_ and _3_; at similar way it occured in more two blocks: 382:423 and 461:502. Values inside each block in **X_test.txt** wasn't equals, so i'd kept those names with apends. This choice named variables from 3rd to 563th columns. The authors achieved similar set with train group.
+From **Inertials Signals** files in **test** directory, the **X_test.txt** was calculated 561 variables for each observation that was named in a peculiar mode by authors and this names was stored in **features.txt**. This names was repeated and they used forbidden characters that in this work I corrected with ```make.names(features, unique = TRUE)```. That variables' names from 303th to 316th columns was repeated in 317:330 and 331:344 respectively and gained sufixes _2_ and _3_; at similar way it occured in more two blocks: 382:423 and 461:502. Values inside each block in **X_test.txt** wasn't equals, so i'd kept those names with apends. This choice named variables from 3rd to 563th columns. The authors achieved similar set with train group.
 
 For a quick genealogy in variables' names from 3rd to 563th were achieved using a Fast Fourier Transformation, **FFT**, so it makes two domains: time with **t** prefix for 3rd up to 267th; frequency with **f** prefix for another ones. 
 We have two main components detected by our sensors: linear and angular acceleration that could be affected by gravity, magnetic field and movement's mode like jerks and spins in that subjects' bodies. So they was combined and born this myriad of names, but not only that, we also want one big collection of statistics and physical quantities like mean, standard deviation, maximum, minimum, skewness, kurtosis, irq, sma, entropy, energy and his bands, etc for each axis.
@@ -36,6 +36,8 @@ My recipe for getting tidy data with this [run_analisys.R](<https://github.com/s
 +  Biding rows for **set** and **train** data frames to make a tidy set named **first_tidy** and printing in a text file format **first_tidy.txt**;
 +  Summarizing the **first_tidy** set with mean and sd for each column from 3rd to 563th and printing as **tidy2.txt**, my choice putting in each column the name of variable, his mean and his sd;
 +  Summarizing the **first_tidy** set grouped by **subjet** and **activity** with mean and sd and printing as **tidy3.txt**.
+
+# References
 
 
 
