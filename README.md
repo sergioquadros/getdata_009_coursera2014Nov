@@ -10,6 +10,11 @@ _Ubuntu 14.04 LTS =  i686-pc-linux-gnu (32-bit)_
 _R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"_
 _RStudio version 0.98.1074_
 
-Our script isn't **OS** agnostic, this means that it was maked in an linux environment and for another one, maybe it's necessary some adjustments.
+Our script isn't **OS** agnostic, this means that it was maked in an linux environment and for another one, maybe it's necessary some adjustments. 
 
-We used the data from the HAR dataset [in this link](<https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>) and 
+Access [run_analisys.R](<https://github.com/sergioquadros/getdata_009_coursera2014Nov/blob/master/run_analisys.R>) script here or in a copy below.
+
+This script produces three files in flat plain text format:
+1.  "**first_tidy.txt**"
+2.  "**tidy2.txt**"
+3.  "**tidy3.txt**"
