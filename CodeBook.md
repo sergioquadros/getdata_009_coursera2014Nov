@@ -4,7 +4,7 @@ author: "Sérgio Henrique Silveira de Quadros"
 date: "2014-11-21"
 output: html_document
 ---
-30 volunteers(19-48 years) was separeted randomly in two sets: **test** with 2947 observations and **train** with 7352 observations.
+We used the data from the HAR dataset [in this link](<https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>), it has 30 volunteers(19-48 years) that was separeted randomly in two sets: **test** with 2947 observations and **train** with 7352 observations.
 
 |subject|sets|
 |---|---|
