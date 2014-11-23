@@ -14,7 +14,7 @@ Our script isn't **OS** agnostic, this means that it was maked in an linux envir
 
 Access [run_analisys.R](<https://github.com/sergioquadros/getdata_009_coursera2014Nov/blob/master/run_analisys.R>) script here or in a copy below.
 
-This script produces three files in flat plain text format:
+This script produces three files in plain text format:
 
 +  "**first_tidy.txt**": the tidy file by Hadley Wickham' principles;
 
