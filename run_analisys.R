@@ -59,21 +59,24 @@ all<-list.files(workdir[2:4], full.names=TRUE)
 features <- as.character(read.table(all[3])[,2])        # 2nd pre-process
 # GOAL 4: appropriate features' labels without repetitions
 # and forbidden characters. There are 561 names with 84 ones repeated.
-features <- make.names(features, unique = TRUE) 
+features %<>%
+        make.names(unique = TRUE) %>%
+                tolower() 
+features <- gsub("\\.","",features[])
 
 subject_test <- tbl_df(read.table(all[7]))              # 3rd pre-process
 # GOAL 4: appropriate label
 colnames(subject_test) <- "subject"
-subject_unique_test <- subject_test %>% unique %>% mutate(status_quo="test")
+subject_unique_test <- subject_test %>% unique %>% mutate(status="test")
 activity_test0 <- read.table(all[9])                    # 4th pre-process
 activity_test <- activity_test0 
 # GOAL 3: uses descriptive activity names to name the activities in the data set
-activity_test[activity_test0==1] <- "WALKING"            
-activity_test[activity_test0==2] <- "WALKING_UPSTAIRS"
-activity_test[activity_test0==3] <- "WALKING_DOWNSTAIRS"
-activity_test[activity_test0==4] <- "SITTING"
-activity_test[activity_test0==5] <- "STANDING"
-activity_test[activity_test0==6] <- "LAYING"    
+activity_test[activity_test0==1] <- "walking"            
+activity_test[activity_test0==2] <- "walking upstairs"
+activity_test[activity_test0==3] <- "walking downstairs"
+activity_test[activity_test0==4] <- "sitting"
+activity_test[activity_test0==5] <- "standing"
+activity_test[activity_test0==6] <- "laying"    
 activity_test <- tbl_df(activity_test)
 # GOAL 4: appropriate label
 colnames(activity_test) <- "activity"
@@ -89,16 +92,16 @@ test <- cbind(cbind(subject_test,activity_test),x_test) # First set to merge
 
 subject_train <- tbl_df(read.table(all[12]))            # 6th pre-process
 colnames(subject_train) <- "subject"
-subject_unique_train <- subject_train %>% unique %>% mutate(status_quo="train")
+subject_unique_train <- subject_train %>% unique %>% mutate(status="train")
 # GOAL 3: uses descriptive activity names to name the activities in the data set
 activity_train0 <- read.table(all[14])                  # 7th pre-process
 activity_train <- activity_train0
-activity_train[activity_train0==1] <- "WALKING"            
-activity_train[activity_train0==2] <- "WALKING_UPSTAIRS"
-activity_train[activity_train0==3] <- "WALKING_DOWNSTAIRS"
-activity_train[activity_train0==4] <- "SITTING"
-activity_train[activity_train0==5] <- "STANDING"
-activity_train[activity_train0==6] <- "LAYING"    
+activity_train[activity_train0==1] <- "walking"            
+activity_train[activity_train0==2] <- "walking upstairs"
+activity_train[activity_train0==3] <- "walking downstairs"
+activity_train[activity_train0==4] <- "sitting"
+activity_train[activity_train0==5] <- "standing"
+activity_train[activity_train0==6] <- "laying"    
 activity_train <- tbl_df(activity_train)
 # GOAL 4: appropriate label
 colnames(activity_train) <- "activity"
@@ -114,7 +117,7 @@ train <-cbind(cbind(subject_train,activity_train),
 # GOAL 1: it merges test and train sets in a tidy file="first_tidy.txt".
 first_tidy <- rbind_list(test,train)
 subject0 <- rbind_list(subject_unique_train,subject_unique_test)
-subject <- subject0 %>% group_by(status_quo) %>% arrange(subject)
+subject <- subject0 %>% group_by(status) %>% arrange(subject)
 # For my use, this write "all_subject.txt" that links subjects to 
 # test or train sets.
 write.table(subject,file="all_subject.txt",row.name=FALSE)
