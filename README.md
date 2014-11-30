@@ -27,7 +27,7 @@ If you want to run this script, command this in your R console (like RStudio) at
 ```source(file="./run_analysis.R", local = TRUE, echo = TRUE)```  
 
 The run_analisys.R script:
-
+```
 # shsq Coursera: Getting and Cleaning Data/2014-11
 # Ubuntu 14.04 LTS =  i686-pc-linux-gnu (32-bit)
 # R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
