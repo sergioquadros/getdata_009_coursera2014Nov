@@ -9,7 +9,7 @@ In a regular expression an escape sequence involves placing the metacharacter \ 
 
 Our Example Target Strings:
 ```
-STRING1 <- "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)"
-STRING2 <- "Mozilla/4.75 [en](X11;U;Linux2.2.16-22 i586)"
+a1 <- "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)"
+a2 <- "Mozilla/4.75 [en](X11;U;Linux2.2.16-22 i586)"
 ```
-
+etc
